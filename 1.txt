@@ -275,8 +275,30 @@ OFFSET 先頭から除外する行数 ROWS
 FETC NEXT 取得行数 ROWS ONLY
 
 ・集合演算子
+SELECT命令によって抽出した結果表を一つのデータ集合と捉え、その結果同士を足し合わせたり、共通部分を探したりできる。
+また、和集合や差集合、積集合などがある。
+和集合  :２つの検索結果を足し合わせたもの
+差集合  :最初の検索結果から、次の検索結果を引いたもの
+積集合  :２つの検索結果で重なるもの
+
+・UNION（和集合）
+SELECT 文１
+UNION (ALL)
+SELECT 文２
+
+・EXCEPT／MINUS（差集合）
+SELECT 文１
+EXCEPT (ALL)
+SELECT 文２
+
+・INTERSECT（積集合）
+SELECT 文１
+INTERSECT (ALL)
+SELECT 文２
 
 
+◆式と関数
+結果が真や偽にならない式を計算式と呼ぶ
 
 
 
